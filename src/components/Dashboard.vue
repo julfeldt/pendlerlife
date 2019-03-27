@@ -1,73 +1,43 @@
 <template>
   <div>
+    <div v-if="loading" class="progress">
+      <div class="indeterminate"></div>
+    </div>
     <div class="container">
-      <div class="notification">
-        This container is
-        <strong>centered</strong> on desktop.
-      </div>
+      <Departure :departures="departures.arbejde" direction="arbejde"/>
     </div>
-
-    <h1>{{new Date().toLocaleTimeString() }}</h1>
-    <h2 class="title is-2">Mod arbejde</h2>
-    <ul
-      v-for="(departure,index) in departures.hjem"
-      :key="`${index}-${departure.JourneyDetailRef.ref}`"
-    >
-      <li>
-        <span>{{ departure.time }}</span>
-        <span style="color: red">{{departure.rtTime ? ` ${departure.rtTime}` : ""}}</span>
-      </li>
-    </ul>
-    <p/>
-    <h2 class="title is-2">Mod friheden</h2>
-
-    <div>
-      <table class="centered">
-        <thead>
-          <tr>
-            <th>
-              <abbr title="Position">Afgang</abbr>
-            </th>
-            <th>Forsinket</th>
-          </tr>
-          <tr
-            v-for="(departure,index) in departures.arbejde"
-            :key="`${index}-${departure.JourneyDetailRef.ref}`"
-          >
-            <td>{{ departure.time }}</td>
-            <td style="color: red">{{departure.rtTime ? ` ${departure.rtTime}` : ""}}</td>
-          </tr>
-        </thead>
-      </table>
+    <div class="container">
+      <Departure :departures="departures.hjem" direction="hjem"/>
     </div>
-
-    <ul
-      v-for="(departure,index) in departures.arbejde"
-      :key="`${index}-${departure.JourneyDetailRef.ref}`"
-    >
-      <li>
-        <span>{{ departure.time }}</span>
-        <span style="color: red">{{departure.rtTime ? ` ${departure.rtTime}` : ""}}</span>
-      </li>
-    </ul>
-    <p/>
+    <div id="status"></div>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
 import axios, { AxiosPromise, AxiosRequestConfig } from "axios";
+import Departure from "./Departure.vue";
 
-@Component
-export default class HelloWorld extends Vue {
-  @Prop() private msg!: string;
+@Component({
+  components: {
+    Departure
+  }
+})
+export default class Dashboard extends Vue {
+  private loading: boolean = true;
 
+  getHours() {
+    return new Date().getHours();
+  }
   private departures: any = {
     hjem: [],
     arbejde: []
   };
 
-  //xhr.setRequestHeader("Origin", 'maximum.blog');
+  // TODO: use a better life cycle
+  updated() {
+    this.loading = false;
+  }
 
   private defaultConf: AxiosRequestConfig = {
     headers: {
@@ -105,7 +75,7 @@ export default class HelloWorld extends Vue {
     limit: number,
     filter: Function
   ) => {
-    url = `data/${key}.json`;
+    //url = `data/${key}.json`;
     const response = await this.getData(url);
     if (response) {
       const departures = response.data.DepartureBoard.Departure;
@@ -122,25 +92,27 @@ export default class HelloWorld extends Vue {
       return await axios.get(url, this.defaultConf);
     } catch (error) {
       console.error("Error loading JSON ", error);
+      // TODO: do this the vue way
+      const elm = document.getElementById("status");
+      if (elm) {
+        elm.innerHTML = error;
+      }
     }
   };
 }
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
+<style scoped>
+#status {
+  padding: 5px;
+  color: #c0c0c0;
 }
-ul {
-  list-style-type: none;
-  padding: 0;
+
+.progress {
+  background-color: #c0c0c0;
 }
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
+
+.indeterminate {
+  background-color: gray;
 }
 </style>
