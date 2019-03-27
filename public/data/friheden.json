@@ -1,0 +1,289 @@
+{
+  "DepartureBoard": {
+    "noNamespaceSchemaLocation": "http://xmlopen.rejseplanen.dk/xml/rest/hafasRestDepartureBoard.xsd",
+    "Departure": [
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "20:39",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=706290%2F257184%2F346208%2F62327%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "20:48",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTime": "20:49",
+        "rtDate": "14.03.19",
+        "rtTrack": "2",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=315576%2F126821%2F316104%2F52861%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "20:59",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=917958%2F327742%2F265758%2F173107%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:08",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=113784%2F59558%2F109406%2F16775%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:19",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=28314%2F31193%2F470544%2F225834%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:28",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=934542%2F333144%2F985796%2F181385%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:39",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=521337%2F195519%2F238222%2F54668%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:48",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=351132%2F138674%2F969532%2F367724%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "21:59",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=819135%2F294802%2F891604%2F172757%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:08",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=44697%2F36708%2F973420%2F471811%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:19",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=638538%2F234586%2F63132%2F181281%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:28",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=132762%2F66063%2F139550%2F25522%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:39",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=910974%2F325399%2F410632%2F98342%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:48",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=384330%2F149919%2F881490%2F312637%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "22:59",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=979485%2F348349%2F371558%2F140716%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "23:08",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=968544%2F344657%2F486828%2F79437%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "23:19",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=611142%2F225568%2F884908%2F238741%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "23:28",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=199791%2F88406%2F22618%2F55292%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "23:39",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "1",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=761640%2F275734%2F572112%2F32178%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Friheden St.",
+        "time": "23:48",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "2",
+        "finalStop": "Solrød Strand St.",
+        "direction": "Solrød Strand St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=733869%2F266432%2F888592%2F199678%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      }
+    ]
+  }
+}

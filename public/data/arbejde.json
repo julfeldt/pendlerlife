@@ -1,0 +1,300 @@
+{
+  "DepartureBoard": {
+    "noNamespaceSchemaLocation": "http://xmlopen.rejseplanen.dk/xml/rest/hafasRestDepartureBoard.xsd",
+    "Departure": [
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:39",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "rtTime": "21:04",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=999993%2F355085%2F394368%2F136147%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "C",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:43",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "6",
+        "finalStop": "Frederikssund St.",
+        "direction": "Frederikssund St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=487083%2F184377%2F281652%2F21535%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "C",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:45",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "finalStop": "Klampenborg St.",
+        "direction": "Klampenborg St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=385740%2F150674%2F505820%2F124330%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 1400",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "20:47",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "4",
+        "rtTrack": "4",
+        "finalStop": "CPH Lufthavn",
+        "direction": "CPH Lufthavn",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=494808%2F167993%2F689266%2F179697%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 1401",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "20:47",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "1",
+        "rtTrack": "1",
+        "finalStop": "Helsingør St.",
+        "direction": "Helsingør St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=265098%2F91596%2F809180%2F316224%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:49",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "6",
+        "rtTime": "20:54",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=524031%2F196307%2F456970%2F53808%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "B",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:53",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "finalStop": "Farum St.",
+        "direction": "Farum St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=107007%2F57639%2F282448%2F105555%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "B",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:55",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTime": "21:04",
+        "rtDate": "14.03.19",
+        "rtTrack": "6",
+        "finalStop": "Høje Taastrup St.",
+        "direction": "Høje Taastrup St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=983229%2F349737%2F312782%2F171352%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 1102",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "20:57",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "4",
+        "rtTrack": "4",
+        "finalStop": "Växjö C",
+        "direction": "Hässleholm C og Växjö C",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=883716%2F335629%2F378338%2F105403%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "20:59",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "finalStop": "Hillerød St.",
+        "direction": "Hillerød St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=548949%2F204737%2F460260%2F47148%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 2281",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "21:00",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "3",
+        "rtTrack": "3",
+        "finalStop": "Nykøbing F St.",
+        "direction": "Nykøbing F St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=682395%2F229991%2F338534%2F58198%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 4183",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "21:03",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "12",
+        "rtTrack": "12",
+        "finalStop": "Borup St.",
+        "direction": "Borup St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=590799%2F199230%2F306844%2F43511%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "C",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "21:03",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "6",
+        "finalStop": "Frederikssund St.",
+        "direction": "Frederikssund St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=42894%2F36304%2F482696%2F227050%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "C",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "21:05",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "finalStop": "Klampenborg St.",
+        "direction": "Klampenborg St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=254343%2F106873%2F834466%2F332452%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 1402",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "21:07",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "3",
+        "rtTrack": "3",
+        "finalStop": "CPH Lufthavn",
+        "direction": "CPH Lufthavn",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=236931%2F82034%2F584216%2F213132%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 1403",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "21:07",
+        "date": "14.03.19",
+        "messages": "0",
+        "track": "1",
+        "rtTrack": "1",
+        "finalStop": "Helsingør St.",
+        "direction": "Helsingør St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=297288%2F102327%2F827268%2F314538%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "A",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "21:09",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "6",
+        "finalStop": "Køge St.",
+        "direction": "Køge St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=2859%2F22583%2F885144%2F441620%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "B",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "21:13",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "5",
+        "finalStop": "Farum St.",
+        "direction": "Farum St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=698733%2F254881%2F927298%2F230739%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "Re 2585",
+        "type": "REG",
+        "stop": "Østerport St.",
+        "time": "21:14",
+        "date": "14.03.19",
+        "messages": "1",
+        "cancelled": "true",
+        "state": "CANCELLATION",
+        "track": "3",
+        "finalStop": "Kalundborg St.",
+        "direction": "Kalundborg St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=80085%2F28533%2F157478%2F52044%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      },
+      {
+        "name": "B",
+        "type": "S",
+        "stop": "Østerport St.",
+        "time": "21:15",
+        "date": "14.03.19",
+        "messages": "0",
+        "rtTrack": "6",
+        "finalStop": "Høje Taastrup St.",
+        "direction": "Høje Taastrup St.",
+        "JourneyDetailRef": {
+          "ref": "http://xmlopen.rejseplanen.dk/bin/rest.exe/journeyDetail?ref=459393%2F175125%2F260152%2F23056%2F86%3Fdate%3D14.03.19%26format%3Djson"
+        }
+      }
+    ]
+  }
+}

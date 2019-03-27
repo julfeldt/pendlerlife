@@ -1,105 +1,85 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
-    <p>
-      For a guide and recipes on how to configure / customize this project,<br />
-      check out the
-      <a href="https://cli.vuejs.org" target="_blank" rel="noopener"
-        >vue-cli documentation</a
-      >.
-    </p>
-    <h3>Installed CLI Plugins</h3>
-    <ul>
+    <h1>{{new Date().toLocaleTimeString() }}</h1>
+    <h2>På arbejde...</h2>
+    <ul
+      v-for="(departure,index) in departures.hjem"
+      :key="`${index}-${departure.JourneyDetailRef.ref}`"
+    >
       <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
-          target="_blank"
-          rel="noopener"
-          >babel</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-typescript"
-          target="_blank"
-          rel="noopener"
-          >typescript</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
-        >
+        <span>{{ departure.time }}</span>
+        <span style="color: red">{{departure.rtTime ? ` ${departure.rtTime}` : ""}}</span>
       </li>
     </ul>
-    <h3>Essential Links</h3>
-    <ul>
+    <p/>
+    <h2>Hjem fra arbejde...</h2>
+    <ul
+      v-for="(departure,index) in departures.arbejde"
+      :key="`${index}-${departure.JourneyDetailRef.ref}`"
+    >
       <li>
-        <a href="https://vuejs.org" target="_blank" rel="noopener">Core Docs</a>
-      </li>
-      <li>
-        <a href="https://forum.vuejs.org" target="_blank" rel="noopener"
-          >Forum</a
-        >
-      </li>
-      <li>
-        <a href="https://chat.vuejs.org" target="_blank" rel="noopener"
-          >Community Chat</a
-        >
-      </li>
-      <li>
-        <a href="https://twitter.com/vuejs" target="_blank" rel="noopener"
-          >Twitter</a
-        >
-      </li>
-      <li>
-        <a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a>
+        <span>{{ departure.time }}</span>
+        <span style="color: red">{{departure.rtTime ? ` ${departure.rtTime}` : ""}}</span>
       </li>
     </ul>
-    <h3>Ecosystem</h3>
-    <ul>
-      <li>
-        <a href="https://router.vuejs.org" target="_blank" rel="noopener"
-          >vue-router</a
-        >
-      </li>
-      <li>
-        <a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a>
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-devtools#vue-devtools"
-          target="_blank"
-          rel="noopener"
-          >vue-devtools</a
-        >
-      </li>
-      <li>
-        <a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener"
-          >vue-loader</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/awesome-vue"
-          target="_blank"
-          rel="noopener"
-          >awesome-vue</a
-        >
-      </li>
-    </ul>
+    <p/>
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from "vue-property-decorator";
+import axios, { AxiosPromise, AxiosRequestConfig } from "axios";
 
 @Component
 export default class HelloWorld extends Vue {
   @Prop() private msg!: string;
+
+  private departures: any = {
+    hjem: [],
+    arbejde: []
+  };
+
+  //xhr.setRequestHeader("Origin", 'maximum.blog');
+
+  private defaultConf: AxiosRequestConfig = {
+    headers: {
+      "X-Requested-With": "XMLHttpRequest"
+    }
+  };
+
+  mounted() {
+    this.getDeparture(
+      "https://cors-anywhere.herokuapp.com/http://xmlopen.rejseplanen.dk/bin/rest.exe/departureBoard?id=008600764&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json",
+      "arbejde",
+      (d: any) => {
+        return d.name === "A" && d.direction === "Køge St.";
+      }
+    );
+    this.getDeparture(
+      "https://cors-anywhere.herokuapp.com/http://xmlopen.rejseplanen.dk/bin/rest.exe/departureBoard?id=008600650&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json",
+      "hjem",
+      (d: any) => {
+        return d.name === "A" && d.direction === "Hillerød St.";
+      }
+    );
+  }
+
+  getDeparture = async (url: string, key: string, filter: Function) => {
+    const response = await this.getData(url);
+    if (response) {
+      const departures = response.data.DepartureBoard.Departure;
+      const filtered = departures.filter(filter);
+      this.departures[key].push(...filtered);
+    }
+  };
+
+  getData = async (url: string) => {
+    try {
+      return await axios.get(url, this.defaultConf);
+    } catch (error) {
+      console.error("Error loading JSON ", error);
+    }
+  };
 }
 </script>
 
