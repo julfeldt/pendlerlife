@@ -68,6 +68,7 @@
         "date": "14.03.19",
         "messages": "0",
         "track": "1",
+        "cancelled": true,
         "rtTrack": "1",
         "finalStop": "Helsingør St.",
         "direction": "Helsingør St.",

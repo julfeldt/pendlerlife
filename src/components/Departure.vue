@@ -12,7 +12,7 @@
           :key="`${index}-${departure.JourneyDetailRef.ref}`"
         >
           <td>
-            <span>{{departure.time }}</span>
+            <span :class="departure.cancelled ? 'cancelled' : ''">{{departure.time }}</span>
             <span class="delay">{{getDelayString(departure)}}</span>
           </td>
         </tr>
@@ -57,5 +57,10 @@ export default class Departure extends Vue {
 
 .departure {
   padding: 10px;
+}
+
+.cancelled {
+  text-decoration: line-through;
+  color: #cd5c5c;
 }
 </style>

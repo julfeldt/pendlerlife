@@ -9,6 +9,8 @@
     <div class="container">
       <Departure :departures="departures.hjem" direction="hjem"/>
     </div>
+
+    <div>Home: {{atHome}} | Work: {{atWork}}</div>
     <div id="status"></div>
   </div>
 </template>
@@ -24,7 +26,13 @@ import Departure from "./Departure.vue";
   }
 })
 export default class Dashboard extends Vue {
+  private PROXY_URL: string = "https://cors-anywhere.herokuapp.com";
+  private BASE_URL: string = `${
+    this.PROXY_URL
+  }/http://xmlopen.rejseplanen.dk/bin/rest.exe`;
   private loading: boolean = true;
+  private atHome: boolean = false;
+  private atWork: boolean = false;
 
   getHours() {
     return new Date().getHours();
@@ -45,9 +53,57 @@ export default class Dashboard extends Vue {
     }
   };
 
+  getCoords(onCoords: Function) {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        position => {
+          // Get current cordinates.
+          const positionCords = {
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude
+          };
+          onCoords(positionCords);
+        },
+        error => {
+          // On error code..
+          console.log("Error ", error);
+        },
+        { timeout: 30000, enableHighAccuracy: true, maximumAge: 75000 }
+      );
+    }
+  }
+
+  addToStatus(status: string) {
+    const elm = document.getElementById("status");
+    if (elm) {
+      elm.innerHTML += "<br/>" + status;
+    }
+  }
+
   mounted() {
+    this.getCoords((coords: any) => {
+      this.isNearStation(coords.latitude, coords.longitude, "Friheden St.")
+        .then(res => {
+          this.atHome = res;
+        })
+        .catch(error => {
+          this.addToStatus(" - H_ERROR: " + error);
+        });
+
+      this.isNearStation(coords.latitude, coords.longitude, "Østerport St.")
+        .then(res => {
+          this.atWork = res;
+        })
+        .catch(error => {
+          this.addToStatus(" - A_ERROR: " + error);
+        });
+    });
+
+    // Get departure to home
     this.getDeparture(
-      "https://cors-anywhere.herokuapp.com/http://xmlopen.rejseplanen.dk/bin/rest.exe/departureBoard?id=008600764&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json",
+      `${
+        this.BASE_URL
+      }/departureBoard?id=008600764&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json`,
       "arbejde",
       3,
       (d: any) => {
@@ -59,8 +115,12 @@ export default class Dashboard extends Vue {
         );
       }
     );
+
+    // Get departure to work
     this.getDeparture(
-      "https://cors-anywhere.herokuapp.com/http://xmlopen.rejseplanen.dk/bin/rest.exe/departureBoard?id=008600650&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json",
+      `${
+        this.BASE_URL
+      }/departureBoard?id=008600650&useTog=1&useBus=0&useMetro=0&offsetTime=0&format=json`,
       "hjem",
       3,
       (d: any) => {
@@ -69,6 +129,7 @@ export default class Dashboard extends Vue {
     );
   }
 
+  // Get the actual departure
   getDeparture = async (
     url: string,
     key: string,
@@ -83,6 +144,24 @@ export default class Dashboard extends Vue {
       this.departures[key].push(...filtered);
       if (this.departures[key].length > limit) {
         this.departures[key].length = limit;
+      }
+    }
+  };
+
+  // Returns true if the given coords are in the vicinity of the specified station
+  isNearStation = async (x: number, y: number, q: string) => {
+    const response = await this.getData(
+      `${
+        this.BASE_URL
+      }/stopsNearby?coordX=${x}&coordY=${y}&maxRadius=3000&maxNumber=30&format=json`
+    );
+    if (response) {
+      const stops = response.data.LocationList.StopLocation;
+      return stops.some((s: any) => s.name === q);
+    } else {
+      const elm = document.getElementById("status");
+      if (elm) {
+        elm.innerHTML = "kan ikke finde GPS";
       }
     }
   };
